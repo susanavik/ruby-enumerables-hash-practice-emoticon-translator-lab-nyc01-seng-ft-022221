@@ -20,10 +20,7 @@ def get_english_meaning(path, emoticon)
   emoji = YAML.load_file(path)
   emoticon_hash = load_library(path)
   emoticon_hash.each do | key, translation |
-    translation.each do |inner_key, emoticon|
-      binding.pry
-      emoticon
-    end
+    binding.pry
   end
 
   english_meaning =  emoticon_hash(emoticon)
