@@ -21,9 +21,9 @@ def get_english_meaning(path, emoticon)
   emoticon_hash = load_library(path)
   emoticon_hash.each do | key, translation |
     if emoticon == translation[:japanese]
-      key
+      return key
     else
-      'Sorry, that emoticon was not found'
+      return 'Sorry, that emoticon was not found'
     end
   end
 
