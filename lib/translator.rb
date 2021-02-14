@@ -22,7 +22,6 @@ def get_english_meaning(path, emoticon)
   emoticon_hash.each do | key, translation |
     if emoticon == translation[:japanese]
       return key
-
     end
   end
    'Sorry, that emoticon was not found'
@@ -31,5 +30,10 @@ end
 def get_japanese_emoticon(path, emoticon)
   emoji = YAML.load_file(path)
   emoticon_hash = load_library(path)
-
+  emoticon_hash.each do | key, translation |
+    if emoticon == translation[:english]
+      return emoticon
+    end
+  end
+  'Sorry, that emoticon was not found'
 end
