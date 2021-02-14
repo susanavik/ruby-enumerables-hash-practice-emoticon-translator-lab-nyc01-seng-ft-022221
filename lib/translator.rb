@@ -29,7 +29,6 @@ def get_english_meaning(path, emoticon)
     key
   english_meaning ? english_meaning : 'Sorry, that emoticon was not found'
   binding.pry
-  end
 
 end
 
