@@ -22,10 +22,11 @@ def get_english_meaning(path, emoticon)
   emoticon_hash.each do | key, translation |
     translation.each do |inner_key, emoticon|
       emoticon
-  if emoticon_hash?(emoticon)
+  if emoticon_hash(emoticon)
     key
-  else return "Sorry, that emoticon was not found"
+    else return "Sorry, that emoticon was not found"
   end
+end
 end
 end
 
