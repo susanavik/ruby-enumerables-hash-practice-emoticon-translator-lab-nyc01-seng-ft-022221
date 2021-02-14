@@ -21,6 +21,7 @@ def get_english_meaning(path, emoticon)
   emoticon_hash = load_library(path)
   emoticon_hash.each do | key, translation |
     translation.each do |inner_key, emoticon|
+      binding.pry
       emoticon
     end
   end
@@ -28,8 +29,6 @@ def get_english_meaning(path, emoticon)
   english_meaning =  emoticon_hash(emoticon)
     key
   english_meaning ? english_meaning : 'Sorry, that emoticon was not found'
-  binding.pry
-
 end
 
 def get_japanese_emoticon(path, emoticon)
