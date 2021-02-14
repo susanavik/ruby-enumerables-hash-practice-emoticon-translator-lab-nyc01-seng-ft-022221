@@ -19,11 +19,11 @@ end
 def get_english_meaning(path, emoticon)
   emoji = YAML.load_file(path)
   emoticon_hash = load_library(path)
-  emoticon_hash.each |key, value|
-  emoticon_hash.keys(emoticon)
-   binding.pry
-
-    # return "Sorry, that emoticon was not found"
+  emoticon_hash.each do | key, (language, emoticon) |
+    binding.pry
+  if emoticon_hash.keys
+    key
+  else return "Sorry, that emoticon was not found"
   end
 end
 
