@@ -22,7 +22,6 @@ def get_english_meaning(path, emoticon)
   emoticon_hash.each do | key, translation |
     translation.each do |inner_key, emoticon|
       emoticon
-    binding.pry
   if emoticon_hash?(emoticon)
     key
   else return "Sorry, that emoticon was not found"
